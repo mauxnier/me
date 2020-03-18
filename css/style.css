@@ -42,3 +42,14 @@ header p {
 header a {
     color: aliceblue;
 }
+
+@media screen and (max-width: 800px) {
+    /* truc à faire là*/
+
+    body {
+        background-image: none;
+        background-color: darkslateblue;
+    }
+
+
+}
