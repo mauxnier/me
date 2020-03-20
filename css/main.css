@@ -6,34 +6,74 @@ span {
   background: grey !important;
 }
 
-h1 {
+body {
+  margin: 0;
+  padding: 0;
   font-family: 'Montserrat';
   text-align: center;
-  color: white;
+  color: whitesmoke;
+}
+
+nav {
+  width: 100vw;
+  height: 7vh;
+  position: absolute;
+  top: 0;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+  padding: 15px 0;
+}
+
+nav .name {
+  text-align: left;
+  width: 40vw;
+  margin: 1em 0;
+  padding-left: 5em;
+  z-index: 2;
 }
 
 .s1 {
   /* Première section */
+  padding: 0 !important;
+  -webkit-filter: drop-shadow(-1px 6px 3px rgba(255, 2, 2, 0.5));
+          filter: drop-shadow(-1px 6px 3px rgba(255, 2, 2, 0.5));
+}
+
+.s1 .accueil {
+  position: fixed;
+  top: 0;
+  min-width: 100vw;
+  height: 95vh;
   background-image: url("../img/one.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+          clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
 }
 
-.s1 .textjs {
+.s1 h1 {
   font-family: 'Poppins';
-  text-align: center;
-  color: white;
-  font-size: 40px;
+  font-size: 50px;
   letter-spacing: 1px;
-  line-height: 32px;
-}
-
-.s1 .textjs .dud {
-  background-color: transparent !important;
 }
 
 .s2 {
   /* Deuxième section */
-  max-height: 100vh;
+  /*max-height: 100vh;*/
 }
 
 .s2 h1 {
