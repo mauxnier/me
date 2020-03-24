@@ -2,10 +2,10 @@ var myFullpage = new fullpage('#fullpage', {
 	//Navigation
 	menu: '#menu',
 	lockAnchors: false,
-	anchors: ['section1', 'section2', 'section3'],
+	anchors: ['home', 'about', 'projects', 'contact'],
 	navigation: true,
 	navigationPosition: 'right',
-	navigationTooltips: ['Accueil', 'About us', 'Contact'],
+	navigationTooltips: ['Accueil', 'À propos', 'Projets', 'Contact'],
 	showActiveTooltip: false,
 	slidesNavigation: true,
 	slidesNavPosition: 'bottom',
@@ -45,7 +45,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Design
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['#ccc', '#fff'],
+	sectionsColor : ['#9e7733', '#9e7733', 'green', 'yellow'],
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
@@ -64,7 +64,10 @@ var myFullpage = new fullpage('#fullpage', {
 	lazyLoading: true,
 
 	//events
-	onLeave: function(origin, destination, direction){},
+	onLeave: function(origin, destination, direction){
+		if (origin.isFirst) $('nav').addClass('black');
+		if (destination.isFirst) $('nav').removeClass('black');
+	},
 	afterLoad: function(origin, destination, direction){},
 	afterRender: function(){},
 	afterResize: function(width, height){},
@@ -72,4 +75,13 @@ var myFullpage = new fullpage('#fullpage', {
 	afterResponsive: function(isResponsive){},
 	afterSlideLoad: function(section, origin, destination, direction){},
 	onSlideLeave: function(section, origin, destination, direction){}
+});
+
+// Scrolling Effect
+$(window).on("scroll", function() {
+	if($(window).scrollTop()) {
+		$('nav').addClass('black');
+	} else {
+		$('nav').removeClass('black');
+	}	
 });

@@ -1,9 +1,20 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 span {
-  /* Changement de la couleur du navigation du fullpage */
-  background: grey !important;
+  /* Changement de la couleur de la bar de navigation du fullpage */
+  background: whitesmoke !important;
+}
+
+.black {
+  /* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -19,33 +30,61 @@ nav {
   height: 7vh;
   position: absolute;
   top: 0;
-  background-color: black;
-  opacity: 0.3;
+  background: transparent;
   z-index: 1;
   padding: 15px 0;
 }
 
 nav .name {
-  text-align: left;
+  position: fixed;
+  float: left;
   width: 40vw;
-  margin: 1em 0;
   padding-left: 5em;
   z-index: 2;
+  text-align: left;
+}
+
+nav .name h3 {
+  margin: 0;
+  padding: 16px 40px;
+}
+
+nav ul {
+  list-style: none;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+  padding-right: 40px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+nav li {
+  display: inline-block;
+  padding: 16px 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white !important;
+  font-size: 16px;
 }
 
 .s1 {
   /* Première section */
   padding: 0 !important;
-  -webkit-filter: drop-shadow(-1px 6px 3px rgba(255, 2, 2, 0.5));
-          filter: drop-shadow(-1px 6px 3px rgba(255, 2, 2, 0.5));
+  /*filter: drop-shadow(-1px 6px 3px rgba(255, 2, 2, 0.5));*/
 }
 
-.s1 .accueil {
+.s1 .home {
   position: fixed;
   top: 0;
   min-width: 100vw;
   height: 95vh;
-  background-image: url("../img/one.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -73,7 +112,6 @@ nav .name {
 
 .s2 {
   /* Deuxième section */
-  /*max-height: 100vh;*/
 }
 
 .s2 h1 {
@@ -99,13 +137,34 @@ nav .name {
 
 .s3 {
   /* Troisième section */
-  background-image: url("../img/three.jpg");
-  background-size: cover;
 }
 
 .s3 h1 {
   text-align: left;
   margin-left: 2em;
   font-size: 2em;
+}
+
+/* Media Query */
+@media (max-width: 786px) {
+  nav ul {
+    max-height: 0px;
+    background: #000;
+  }
+  nav li {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+  }
+  nav .menu-icon {
+    display: block;
+  }
+  nav .name {
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
