@@ -44,7 +44,15 @@ nav {
 
         h3 {
             margin: 0;
-            padding: 16px 40px;
+            padding: 16px 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5em;
         }
     }
 
@@ -111,16 +119,6 @@ nav {
     div {
         display: inline-block;
         height: 100vh;
-    }
-
-    .d1 {
-        background-color: lightblue;
-        width: 35vw;
-    }
-
-    .d2 {
-        background-color: lightpink;
-        width: 65vw;
     }
 }
 

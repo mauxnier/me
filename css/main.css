@@ -46,7 +46,15 @@ nav .name {
 
 nav .name h3 {
   margin: 0;
-  padding: 16px 40px;
+  padding: 16px 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav .name img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5em;
 }
 
 nav ul {
@@ -127,16 +135,6 @@ nav a {
 .s2 div {
   display: inline-block;
   height: 100vh;
-}
-
-.s2 .d1 {
-  background-color: lightblue;
-  width: 35vw;
-}
-
-.s2 .d2 {
-  background-color: lightpink;
-  width: 65vw;
 }
 
 .s3 {
