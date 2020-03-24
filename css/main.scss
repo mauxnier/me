@@ -74,11 +74,14 @@ nav {
 
 .s1 { /* Première section */
     padding: 0 !important;
-    /*filter: drop-shadow(-1px 6px 3px rgba(255, 2, 2, 0.5));*/ 
+    
+    .polygoneShadow {
+        position: absolute;
+        top: 0;
+        filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    }
 
     .home {
-        position: fixed;
-        top: 0;
         min-width: 100vw;
         height: 95vh;
         background-image: url('../img/background.jpg');
@@ -122,6 +125,15 @@ nav {
 }
 
 .s3 { /* Troisième section */
+
+    h1 {
+        text-align: left;
+        margin-left: 2em;
+        font-size: 2em;
+    }
+}
+
+.s3 { /* Quatrième section */
 
     h1 {
         text-align: left;
