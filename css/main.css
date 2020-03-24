@@ -7,7 +7,7 @@ html, body {
   width: 100%;
 }
 
-span {
+a span {
   /* Changement de la couleur de la bar de navigation du fullpage */
   background: whitesmoke !important;
 }
@@ -15,6 +15,14 @@ span {
 .black {
   /* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.typewriter:after {
+  /* AI Styling */
+  border-right: 0.15em solid #7561ff;
+  -webkit-animation: caret_typewriter 1s steps(1) infinite;
+          animation: caret_typewriter 1s steps(1) infinite;
+  content: "";
 }
 
 body {

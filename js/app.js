@@ -9,7 +9,7 @@ var myFullpage = new fullpage('#fullpage', {
 	showActiveTooltip: false,
 	slidesNavigation: true,
 	slidesNavPosition: 'bottom',
-
+/*
 	//Scrolling
 	css3: true,
 	scrollingSpeed: 700,
@@ -45,7 +45,9 @@ var myFullpage = new fullpage('#fullpage', {
 	//Design
 	controlArrows: true,
 	verticalCentered: true,
+*/
 	sectionsColor : ['rgb(135, 206, 235)', 'rgb(135, 206, 235)', 'rgb(240,128,128)', '#43302f'],
+/*
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
@@ -62,12 +64,13 @@ var myFullpage = new fullpage('#fullpage', {
 	slideSelector: '.slide',
 
 	lazyLoading: true,
-
+*/
 	//events
-	onLeave: function(origin, destination, direction){
+	onLeave: function(origin, destination, direction){ //Scrolling Effect
 		if (origin.isFirst) $('nav').addClass('black');
 		if (destination.isFirst) $('nav').removeClass('black');
 	},
+/*
 	afterLoad: function(origin, destination, direction){},
 	afterRender: function(){},
 	afterResize: function(width, height){},
@@ -75,13 +78,5 @@ var myFullpage = new fullpage('#fullpage', {
 	afterResponsive: function(isResponsive){},
 	afterSlideLoad: function(section, origin, destination, direction){},
 	onSlideLeave: function(section, origin, destination, direction){}
-});
-
-// Scrolling Effect
-$(window).on("scroll", function() {
-	if($(window).scrollTop()) {
-		$('nav').addClass('black');
-	} else {
-		$('nav').removeClass('black');
-	}	
+*/
 });

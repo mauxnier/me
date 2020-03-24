@@ -9,13 +9,19 @@ html, body {
 
 $couleurNav: whitesmoke;
 
-span { /* Changement de la couleur de la bar de navigation du fullpage */
+a span { /* Changement de la couleur de la bar de navigation du fullpage */
     background: $couleurNav !important;
 }
 
 .black { /* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.typewriter:after { /* AI Styling */
+    border-right: 0.15em solid #7561ff;
+    animation: caret_typewriter 1s steps(1) infinite;
+    content: "";
+  }
 
 body {
     margin: 0;
@@ -167,3 +173,7 @@ nav {
         }
     }
 }
+
+
+
+
