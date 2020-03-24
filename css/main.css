@@ -19,10 +19,25 @@ a span {
 
 .typewriter:after {
   /* AI Styling */
-  border-right: 0.15em solid #7561ff;
+  border-right: 0.15em solid whitesmoke;
   -webkit-animation: caret_typewriter 1s steps(1) infinite;
           animation: caret_typewriter 1s steps(1) infinite;
   content: "";
+  position: absolute;
+  top: 10px;
+  height: 70%;
+}
+
+@-webkit-keyframes caret_typewriter {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes caret_typewriter {
+  50% {
+    border-color: transparent;
+  }
 }
 
 body {
@@ -69,7 +84,6 @@ nav ul {
   list-style: none;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
-  color: #fff;
   padding: 0;
   text-align: right;
   margin: 0;
@@ -85,7 +99,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: white !important;
+  color: whitesmoke !important;
   font-size: 16px;
 }
 
@@ -128,6 +142,7 @@ nav a {
   font-family: 'Poppins';
   font-size: 50px;
   letter-spacing: 1px;
+  position: relative;
 }
 
 .s2 {

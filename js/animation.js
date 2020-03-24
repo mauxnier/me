@@ -1,8 +1,8 @@
 //Typewriter
 (function($) {
-	var aiMsg = ["Bonjour et bienvenue !", "Je m'appelle Killian Monnier.", "Je suis étudiant. 🎓", "Je suis développeur. 💻"];
+	var aiMsg = ["Bonjour et bienvenue !", "Je m'appelle Killian Monnier.", "Je suis étudiant. 🎓", "Je suis développeur. 💻", "Bienvenue"];
     var num = 0;
-
+    
 	$(document).ready(function() {
 		var inputAI = $("#reg_ai");
 		

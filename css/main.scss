@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+$sky: rgb(135, 206, 235);
+$rock: rgb(67, 48, 47);
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
-$couleurNav: whitesmoke;
-
 a span { /* Changement de la couleur de la bar de navigation du fullpage */
-    background: $couleurNav !important;
+    background: whitesmoke !important;
 }
 
 .black { /* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
@@ -18,10 +19,19 @@ a span { /* Changement de la couleur de la bar de navigation du fullpage */
 }
 
 .typewriter:after { /* AI Styling */
-    border-right: 0.15em solid #7561ff;
+    border-right: 0.15em solid whitesmoke;
     animation: caret_typewriter 1s steps(1) infinite;
     content: "";
-  }
+    position: absolute;
+    top: 10px;
+    height: 70%;
+}
+
+@keyframes caret_typewriter {
+    50% {
+      border-color: transparent;
+    }
+}
 
 body {
     margin: 0;
@@ -66,7 +76,6 @@ nav {
         list-style: none;
         background: rgba(0, 0, 0, 0);
         overflow: hidden;
-        color: #fff;
         padding: 0;
         text-align: right;
         margin: 0;
@@ -81,7 +90,7 @@ nav {
 
     a {
         text-decoration: none;
-        color: white !important;
+        color: whitesmoke !important;
         font-size: 16px;
     }
 }
@@ -112,6 +121,7 @@ nav {
         font-family: 'Poppins';
         font-size: 50px;
         letter-spacing: 1px;
+        position: relative;
     }  
 }
 
