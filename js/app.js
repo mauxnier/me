@@ -67,8 +67,8 @@ var myFullpage = new fullpage('#fullpage', {
 */
 	//events
 	onLeave: function(origin, destination, direction){ //Scrolling Effect
-		if (origin.isFirst) $('nav').addClass('black');
-		if (destination.isFirst) $('nav').removeClass('black');
+		if (origin.isFirst) $('body > nav').addClass('black');
+		if (destination.isFirst) $('body > nav').removeClass('black');
 	},
 /*
 	afterLoad: function(origin, destination, direction){},
