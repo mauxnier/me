@@ -1,6 +1,6 @@
 //Typewriter
 (function($) {
-	var aiMsg = ["Bonjour et bienvenue !", "Je m'appelle Killian Monnier.", "Je suis étudiant. 🎓", "Je suis développeur. 💻", "Bienvenue"];
+	var aiMsg = ["Bonjour et bienvenue !", "Je m'appelle Killian Monnier.", "Je suis étudiant en DUT informatique. 🎓", "Je recherche une alternance en développement. 💻", "Bienvenue"];
     var num = 0;
     
 	$(document).ready(function() {

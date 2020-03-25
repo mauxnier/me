@@ -7,25 +7,22 @@ html, body {
   width: 100%;
 }
 
+/* Changement de la couleur de la bar de navigation du fullpage */
 a span {
-  /* Changement de la couleur de la bar de navigation du fullpage */
   background: whitesmoke !important;
 }
 
+/* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
 .black {
-  /* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* AI Styling */
 .typewriter:after {
-  /* AI Styling */
-  border-right: 0.15em solid whitesmoke;
+  border-right: 0.05em solid whitesmoke;
   -webkit-animation: caret_typewriter 1s steps(1) infinite;
           animation: caret_typewriter 1s steps(1) infinite;
   content: "";
-  position: absolute;
-  top: 10px;
-  height: 70%;
 }
 
 @-webkit-keyframes caret_typewriter {
@@ -40,6 +37,34 @@ a span {
   }
 }
 
+/* SVG WRAPPER */
+.svg-wrapper {
+  position: relative;
+  top: 10em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0 auto;
+  width: 320px;
+}
+
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: skyblue;
+  border-bottom: 5px solid black;
+  -webkit-transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+/* CSS pour la page */
 body {
   margin: 0;
   padding: 0;
@@ -48,7 +73,7 @@ body {
   color: whitesmoke;
 }
 
-nav {
+body > nav {
   width: 100vw;
   height: 7vh;
   position: absolute;
@@ -58,7 +83,7 @@ nav {
   padding: 15px 0;
 }
 
-nav .name {
+body > nav .name {
   position: fixed;
   float: left;
   width: 40vw;
@@ -67,20 +92,20 @@ nav .name {
   text-align: left;
 }
 
-nav .name h3 {
+body > nav .name h3 {
   margin: 0;
   padding: 16px 15px;
   display: inline-block;
   vertical-align: middle;
 }
 
-nav .name img {
+body > nav .name img {
   display: inline-block;
   vertical-align: middle;
   margin-left: 5em;
 }
 
-nav ul {
+body > nav ul {
   list-style: none;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
@@ -92,12 +117,12 @@ nav ul {
   transition: 1s;
 }
 
-nav li {
+body > nav li {
   display: inline-block;
   padding: 16px 40px;
 }
 
-nav a {
+body > nav a {
   text-decoration: none;
   color: whitesmoke !important;
   font-size: 16px;
@@ -108,6 +133,16 @@ nav a {
   padding: 0 !important;
 }
 
+.s1 .social {
+  font-size: 2rem;
+  position: relative;
+  top: -1.7em;
+}
+
+.s1 .social a {
+  color: salmon;
+}
+
 .s1 .polygoneShadow {
   position: absolute;
   top: 0;
@@ -115,12 +150,23 @@ nav a {
           filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
-.s1 .home {
+.s1 .background-image {
   min-width: 100vw;
   height: 95vh;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+          clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  position: fixed;
+  top: 0;
+}
+
+.s1 .content {
+  min-width: 100vw;
+  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,8 +180,9 @@ nav a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
-          clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+  position: fixed;
+  top: 0;
+  z-index: 5;
 }
 
 .s1 h1 {

@@ -10,21 +10,21 @@ html, body {
     width: 100%;
 }
 
-a span { /* Changement de la couleur de la bar de navigation du fullpage */
+/* Changement de la couleur de la bar de navigation du fullpage */
+a span {
     background: whitesmoke !important;
 }
 
-.black { /* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
+/* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
+.black {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.typewriter:after { /* AI Styling */
-    border-right: 0.15em solid whitesmoke;
+/* AI Styling */
+.typewriter:after {
+    border-right: 0.05em solid whitesmoke;
     animation: caret_typewriter 1s steps(1) infinite;
     content: "";
-    position: absolute;
-    top: 10px;
-    height: 70%;
 }
 
 @keyframes caret_typewriter {
@@ -33,6 +33,32 @@ a span { /* Changement de la couleur de la bar de navigation du fullpage */
     }
 }
 
+/* SVG WRAPPER */
+.svg-wrapper {
+    position: relative;
+    top: 10em;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 320px;  
+}
+
+.shape {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    fill: transparent;
+    stroke: $sky;
+    border-bottom: 5px solid black;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.svg-wrapper:hover .shape {
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+
+/* CSS pour la page */
 body {
     margin: 0;
     padding: 0;
@@ -41,7 +67,7 @@ body {
     color: whitesmoke;
 }
 
-nav {
+body > nav {
     width: 100vw;
     height: 7vh;
     position: absolute;
@@ -97,24 +123,44 @@ nav {
 
 .s1 { /* Première section */
     padding: 0 !important;
-    
+
+    .social {
+        font-size: 2rem;
+        position: relative;
+        top: -1.7em;
+        a {
+            color: salmon;
+        }
+    }
+
     .polygoneShadow {
         position: absolute;
         top: 0;
         filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
     }
 
-    .home {
+    .background-image {
         min-width: 100vw;
         height: 95vh;
         background-image: url('../img/background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+        filter: blur(5px);
+        position: fixed;
+        top: 0;
+    }
+
+    .content {
+        min-width: 100vw;
+        height: 95vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+        position: fixed;
+        top: 0;
+        z-index: 5;
     }
 
     h1 {
