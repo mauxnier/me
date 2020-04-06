@@ -10,6 +10,7 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-162861150-1');
+        gtag('set', {'user_id': 'USER_ID'}); // Définir l'ID utilisateur à partir du paramètre user_id de l'utilisateur connecté.
     </script>
 
     <meta charset="utf-8">
@@ -25,6 +26,15 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
+    <div class="loader-wrapper">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+
     <nav role="navigation"> <!--<img src="img/logo.png" width="30" height="30" alt="">--> 
         <div class="name">
             <img src="img/logo.png" width="40" height="40" alt="">
@@ -129,6 +139,12 @@
         <script src="js/app.js"></script>
         <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
         <script src="js/animation.js"></script>
+        <!-- Loader fade out when the window is loaded -->
+        <script>
+            $(window).on("load", function(){
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </div>
 </body> 
 </html>
