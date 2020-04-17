@@ -121,6 +121,10 @@ body > nav {
     }
 }
 
+.section {
+    max-height: 100vh !important;
+}
+
 .s1 { /* Première section */
     padding: 0 !important;
 
@@ -173,28 +177,51 @@ body > nav {
 }
 
 .s2 { /* Deuxième section */
+    //display: flex;
+    //flex-flow: row nowrap;
 
     h1 {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 3em;
         font-variant: small-caps;
         color: lightcoral;
-        position: absolute;
-        right: 5.5em;
-        top: 1.5em;
+        margin: 7% 0 5% 0;
     }
 
     img {
-        display: flex;
         border-radius: 50%;
-        height: 45%;
-        position: absolute;
-        bottom: 3em;
+        height: 50%;
+        width: 50%;
         filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.486));
     }
 
-    .description {
-        text-align: left;
+    p {
+        text-align: center;
+        margin-left: 2em;
+        margin: 0 5% 5% 5%;
+    }
+
+    /*
+    .flex-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        max-width: 50%;
+    }
+    */
+
+    .first-flex-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        max-width: 50%;
+    }
+
+    .second-flex-container {
+        max-width: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 }
 
@@ -257,29 +284,32 @@ body > nav {
 
 /* SKILL BAR COLORS */
 
-.skill-percent-html {
-    background-color: #FF5C00;
+.skill-percent-web {
+    background-color: #00B1DB   ;
 }
-.skill-percent-css {
-    background-color: #00B1DB;
-}
-.skill-percent-jquery {
-    background-color: #FFC100;
-}
-.skill-percent-scss {
-    background-color: #FF768E;
-}
-.skill-percent-javascript {
-    background-color: #FF8B00;
-}
-.skill-percent-wordpress {
-    background-color: #0073b0;
+.skill-percent-js {
+    background-color: #FFC100 ;
 }
 .skill-percent-php {
-    background-color: #464c99;
+    background-color: #554699;
 }
-.skill-percent-git {
+.skill-percent-sql {
+    background-color: #3841c9;
+}
+.skill-percent-c {
+    background-color: #8a8ec9;
+}
+.skill-percent-py {
+    background-color: #059400;
+}
+.skill-percent-unix {
+    background-color: #0073b0;
+}
+.skill-percent-java {
     background-color: #ff5c00;
+}
+.skill-percent-projet {
+    background-color: #FF8B00;
 }
 
 /* Heading Underline */
