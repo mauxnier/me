@@ -329,36 +329,6 @@ body > nav {
     width: 110%;
 }
 
-
-
-/* Media Queries */
-
-@media(max-width: 786px) {
-    nav {
-        ul {
-            max-height: 0px;
-            background: #000;
-        }
-
-        li {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .menu-icon {
-            display: block;
-        }
-
-        .name {
-            position: fixed;
-            top: 0;
-            margin-top: 16px;
-        }
-    }
-}
-
 /* Loader */
 
 .loader-wrapper {
@@ -437,3 +407,100 @@ body > nav {
         opacity: 0; 
     }
 }
+
+.ham {
+    display: none;
+}
+
+/* Media Queries */
+
+@media(max-width: 786px) {
+
+    /* Flippin' burger */
+
+    .ham {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .hamRotate.active {
+        transform: rotate(45deg);
+    }
+
+    .hamRotate180.active {
+        transform: rotate(180deg);
+    }
+
+    .line {
+        fill:none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: white;
+        stroke-width:5.5;
+        stroke-linecap:round;
+    }
+
+    .ham6 .top {
+        stroke-dasharray: 40 172;
+    }
+
+    .ham6 .middle {
+        stroke-dasharray: 40 111;
+    }
+
+    .ham6 .bottom {
+        stroke-dasharray: 40 172;
+    }
+
+    .ham6.active .top {
+        stroke-dashoffset: -132px;
+    }
+
+    .ham6.active .middle {
+        stroke-dashoffset: -71px;
+    }
+
+    .ham6.active .bottom {
+        stroke-dashoffset: -132px;
+    }
+
+    nav {
+        /*
+        ul {
+            max-height: 0px;
+            background: #000;
+        }
+
+        li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .name {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+        }
+        */
+
+        text-align: left;
+
+        .menu {
+            display: none;
+        }
+    }
+}
+
