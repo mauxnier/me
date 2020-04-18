@@ -74,9 +74,10 @@ body {
 }
 
 body > nav {
+  /* Navbar du haut */
   width: 100vw;
   height: 7vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   background: transparent;
   z-index: 1;
@@ -84,7 +85,7 @@ body > nav {
 }
 
 body > nav .name {
-  position: fixed;
+  position: relative;
   float: left;
   width: 40vw;
   padding-left: 5em;
@@ -486,6 +487,7 @@ body > nav a {
 @media (max-width: 786px) {
   /* Flippin' burger */
   .ham {
+    display: block;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     -webkit-transition: -webkit-transform 400ms;
@@ -496,9 +498,6 @@ body > nav a {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    position: fixed;
-    top: 0;
-    left: 0;
   }
   .hamRotate.active {
     -webkit-transform: rotate(45deg);
@@ -558,10 +557,32 @@ body > nav a {
             margin-top: 16px;
         }
         */
-    text-align: left;
+    height: 11vh !important;
+    padding: 0 !important;
   }
   nav .menu {
     display: none;
+  }
+  nav .name {
+    padding: 0 !important;
+    position: fixed !important;
+    top: 2%;
+    right: 20%;
+    width: 50% !important;
+  }
+  nav .name img {
+    margin: 0 !important;
+  }
+  .s1 .content #reg_ai {
+    position: fixed;
+    top: 40%;
+  }
+  .s1 h1 {
+    font-size: 35px;
+  }
+  .s1 .svg-wrapper {
+    position: fixed;
+    top: 60%;
   }
 }
 /*# sourceMappingURL=main.css.map */
