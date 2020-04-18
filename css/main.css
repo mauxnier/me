@@ -41,8 +41,6 @@ a span {
 .svg-wrapper {
   position: relative;
   top: 10em;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   margin: 0 auto;
   width: 320px;
 }
@@ -125,8 +123,63 @@ body > nav li {
 
 body > nav a {
   text-decoration: none;
-  color: whitesmoke !important;
+  color: whitesmoke;
   font-size: 16px;
+}
+
+body > nav.is-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh !important;
+  width: 100vw;
+  background-color: white;
+  z-index: 101;
+  overflow: hidden;
+}
+
+body > nav.is-open .name h3 {
+  color: black;
+}
+
+body > nav.is-open .menu {
+  display: block;
+}
+
+body > nav.is-open .menu ul {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  height: 80vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > nav.is-open .menu ul a {
+  color: black;
+  font-size: 1.5em;
+}
+
+body > nav.is-open #burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body > nav.is-open #burger .line {
+  stroke: black;
 }
 
 .section {
@@ -567,22 +620,32 @@ body > nav a {
     padding: 0 !important;
     position: fixed !important;
     top: 2%;
-    right: 20%;
-    width: 50% !important;
+    left: 32vw;
+    width: auto !important;
   }
   nav .name img {
     margin: 0 !important;
   }
   .s1 .content #reg_ai {
-    position: fixed;
-    top: 40%;
+    position: absolute;
+    top: 35%;
   }
   .s1 h1 {
     font-size: 35px;
   }
   .s1 .svg-wrapper {
-    position: fixed;
-    top: 60%;
+    position: absolute;
+    top: 70%;
+  }
+  .s2 .first-flex-container {
+    min-width: 100vw;
+    min-height: 75vh;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .s2 .second-flex-container {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

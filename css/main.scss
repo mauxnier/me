@@ -37,7 +37,6 @@ a span {
 .svg-wrapper {
     position: relative;
     top: 10em;
-    transform: translateY(-50%);
     margin: 0 auto;
     width: 320px;  
 }
@@ -116,10 +115,59 @@ body > nav { /* Navbar du haut */
 
     a {
         text-decoration: none;
-        color: whitesmoke !important;
+        color: whitesmoke;
         font-size: 16px;
     }
 }
+
+body > nav.is-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh !important;
+    width: 100vw;
+    background-color: white;
+    z-index: 101;
+    overflow: hidden;
+
+    .name {
+        h3 {
+            color: black;
+        }
+    }
+    
+    .menu {
+        display: block;
+
+        ul {
+            position: fixed;
+            top: 10%;
+            left: 0;
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                color: black;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    #burger {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .line {
+            stroke: black;
+        }
+    }
+}
+
 
 .section {
     max-height: 100vh !important;
@@ -505,8 +553,8 @@ body > nav { /* Navbar du haut */
             padding: 0 !important;
             position: fixed !important;
             top: 2%;
-            right: 20%;
-            width: 50% !important;
+            left: 32vw;
+            width: auto !important;
 
             img {
                 margin: 0 !important;
@@ -515,11 +563,10 @@ body > nav { /* Navbar du haut */
     }
 
     .s1 {
-
         .content {
             #reg_ai {
-                position: fixed;
-                top: 40%;
+                position: absolute;
+                top: 35%;
             }
         }
 
@@ -528,8 +575,20 @@ body > nav { /* Navbar du haut */
         }
 
         .svg-wrapper {
-            position: fixed;
-            top: 60%;
+            position: absolute;
+            top: 70%;
+        }
+    }
+
+    .s2 {
+        .first-flex-container {
+            min-width: 100vw;
+            min-height: 75vh;
+            justify-content: space-evenly;
+        }
+
+        .second-flex-container {
+            display: none;
         }
     }
 }

@@ -1,3 +1,8 @@
+/**
+ * @author Killian Monnier
+ * @see https://github.com/paraceltus/me
+ */
+
 //Typewriter
 (function($) {
 	var aiMsg = ["Bonjour et bienvenue !", "Je m'appelle Killian Monnier.", "Je suis étudiant en DUT informatique. 🎓", "Je recherche une alternance en développement. 💻", "Bienvenue"];
@@ -68,3 +73,11 @@ $('.skill-percent').each(function(){
 	$(this).animate({
 	  width:$(this).attr('data-percent')},"fast");
 	});
+
+// Hamburger navbar
+let burger = document.getElementById('burger'),
+	nav    = document.getElementById('main-nav');
+
+burger.addEventListener('click', function(e){
+	nav.classList.toggle('is-open');
+});
