@@ -66,9 +66,16 @@ var myFullpage = new fullpage('#fullpage', {
 	lazyLoading: true,
 */
 	//events
-	onLeave: function(origin, destination, direction){ //Scrolling Effect
+	onLeave: function(origin, destination, direction){
+		//Scrolling Effect
 		if (origin.isFirst) $('body > nav').addClass('black');
 		if (destination.isFirst) $('body > nav').removeClass('black');
+
+		//Burger navigation
+		if (nav.classList.contains('is-open')) {
+			nav.classList.remove('is-open');
+			burger.classList.remove('active');
+		}
 	},
 /*
 	afterLoad: function(origin, destination, direction){},
