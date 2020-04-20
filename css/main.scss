@@ -542,7 +542,7 @@ body > nav.is-open {
         }
         */
         
-        height: 11vh !important;
+        height: 80px !important;
         padding: 0 !important;
 
         .menu {
@@ -561,9 +561,24 @@ body > nav.is-open {
             }
         }
     }
+    
+    #fp-nav {
+        right: 5px !important;
+    }
+
+    .polygoneShadow {
+        filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    }
 
     .s1 {
+        .background-image {
+            height: 97vh;
+            clip-path: polygon(100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
+        }
+
         .content {
+            min-width: 80vw;
+            margin-left: 10vw;
             #reg_ai {
                 position: absolute;
                 top: 35%;
@@ -571,7 +586,7 @@ body > nav.is-open {
         }
 
         h1 {
-            font-size: 35px;
+            font-size: 30px;
         }
 
         .svg-wrapper {

@@ -82,4 +82,3 @@ let burger = document.getElementById('burger'),
 burger.addEventListener('click', function(e){
 	nav.classList.toggle('is-open');
 });
-
