@@ -5,7 +5,7 @@
 
 //Typewriter
 (function($) {
-	var aiMsg = ["Bonjour et bienvenue !", "Je m'appelle Killian Monnier.", "Je suis étudiant en DUT informatique. 🎓", "Je recherche une alternance en développement. 💻", "Bienvenue"];
+	var aiMsg = ["Bonjour et bienvenue !", "Je m'appelle Killian Monnier.", "Je suis étudiant en DUT informatique. 🎓", "Je recherche une alternance en développement. 💻"];
     var num = 0;
     
 	$(document).ready(function() {
@@ -28,7 +28,7 @@
 					 }, 2500);
             });
             num++;
-            if (num == wordArray.length()-1) num = 0;
+            if (num == wordArray.length - 1) num = 0; //coz error in the console idky
 		}
 	});
 	//AI Text typer
