@@ -40,9 +40,10 @@ a span {
 /* SVG WRAPPER */
 .svg-wrapper {
   position: relative;
-  top: 10em;
+  top: 6em;
   margin: 0 auto;
   width: 320px;
+  height: 60px;
 }
 
 .shape {
@@ -74,21 +75,28 @@ body {
 body > nav {
   /* Navbar du haut */
   width: 100vw;
-  height: 7vh;
+  height: 10%;
   position: fixed;
   top: 0;
   background: transparent;
   z-index: 1;
-  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 body > nav .name {
-  position: relative;
-  float: left;
-  width: 40vw;
-  padding-left: 5em;
   z-index: 2;
-  text-align: left;
 }
 
 body > nav .name h3 {
@@ -101,7 +109,6 @@ body > nav .name h3 {
 body > nav .name img {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 5em;
 }
 
 body > nav ul {
@@ -109,9 +116,7 @@ body > nav ul {
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   padding: 0;
-  text-align: right;
   margin: 0;
-  padding-right: 40px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -140,6 +145,8 @@ body > nav.is-open {
 
 body > nav.is-open .name h3 {
   color: black;
+  position: fixed;
+  top: 5px;
 }
 
 body > nav.is-open .menu {
@@ -195,10 +202,14 @@ body > nav.is-open #burger .line {
   font-size: 2rem;
   position: relative;
   top: -1.7em;
+  height: 60px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .s1 .social a {
   color: salmon;
+  vertical-align: sub;
 }
 
 .s1 .polygoneShadow {
@@ -586,7 +597,7 @@ body > nav.is-open #burger .line {
   .ham6.active .bottom {
     stroke-dashoffset: -132px;
   }
-  nav {
+  body > nav {
     /*
         ul {
             max-height: 0px;
@@ -610,21 +621,22 @@ body > nav.is-open #burger .line {
             margin-top: 16px;
         }
         */
-    height: 80px !important;
-    padding: 0 !important;
+    display: block;
+    height: 80px;
+    padding: 0;
   }
-  nav .menu {
+  body > nav .menu {
     display: none;
   }
-  nav .name {
-    padding: 0 !important;
-    position: fixed !important;
-    top: 2%;
+  body > nav .name {
+    padding: 0;
+    position: fixed;
+    top: 10px;
     left: 32vw;
-    width: auto !important;
+    width: auto;
   }
-  nav .name img {
-    margin: 0 !important;
+  body > nav .name img {
+    margin: 0;
   }
   #fp-nav {
     right: 5px !important;

@@ -36,9 +36,10 @@ a span {
 /* SVG WRAPPER */
 .svg-wrapper {
     position: relative;
-    top: 10em;
+    top: 6em;
     margin: 0 auto;
-    width: 320px;  
+    width: 320px; 
+    height: 60px; 
 }
 
 .shape {
@@ -68,20 +69,20 @@ body {
 
 body > nav { /* Navbar du haut */
     width: 100vw;
-    height: 7vh;
+    height: 10%;
     position: fixed;
     top: 0;
     background: transparent;
     z-index: 1;
-    padding: 15px 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
 
     .name {
-        position: relative;;
-        float: left;
-        width: 40vw;
-        padding-left: 5em;
+        //width: 30vw;
         z-index: 2;
-        text-align: left;
 
         h3 {
             margin: 0;
@@ -93,7 +94,6 @@ body > nav { /* Navbar du haut */
         img {
             display: inline-block;
             vertical-align: middle;
-            margin-left: 5em;
         }
     }
 
@@ -102,9 +102,7 @@ body > nav { /* Navbar du haut */
         background: rgba(0, 0, 0, 0);
         overflow: hidden;
         padding: 0;
-        text-align: right;
         margin: 0;
-        padding-right: 40px;
         transition: 1s;
     }
 
@@ -133,6 +131,8 @@ body > nav.is-open {
     .name {
         h3 {
             color: black;
+            position: fixed;
+            top: 5px;
         }
     }
     
@@ -180,9 +180,12 @@ body > nav.is-open {
         font-size: 2rem;
         position: relative;
         top: -1.7em;
+        height: 60px;
+        transform: translateY(-10px);
 
         a {
             color: salmon;
+            vertical-align: sub;
         }
     }
 
@@ -517,7 +520,7 @@ body > nav.is-open {
         stroke-dashoffset: -132px;
     }
 
-    nav {
+    body > nav {
         /*
         ul {
             max-height: 0px;
@@ -542,22 +545,23 @@ body > nav.is-open {
         }
         */
         
-        height: 80px !important;
-        padding: 0 !important;
+        display: block;
+        height: 80px;
+        padding: 0;
 
         .menu {
             display: none;
         }
 
         .name {
-            padding: 0 !important;
-            position: fixed !important;
-            top: 2%;
+            padding: 0;
+            position: fixed;
+            top: 10px;
             left: 32vw;
-            width: auto !important;
+            width: auto;
 
             img {
-                margin: 0 !important;
+                margin: 0;
             }
         }
     }
