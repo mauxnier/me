@@ -69,14 +69,14 @@ body {
 
 body .fp-controlArrow.fp-prev {
   left: 5%;
-  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.3));
 }
 
 body .fp-controlArrow.fp-next {
   right: 5%;
-  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.3));
 }
 
 body > nav {
@@ -85,7 +85,7 @@ body > nav {
   height: 10%;
   position: fixed;
   top: 0;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,9 +97,8 @@ body > nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 body > nav .name {
@@ -118,9 +117,38 @@ body > nav .name img {
   vertical-align: middle;
 }
 
-body > nav ul {
+body > nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body > nav .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   overflow: hidden;
   padding: 0;
   margin: 0;
@@ -128,18 +156,35 @@ body > nav ul {
   transition: 1s;
 }
 
-body > nav li {
+body > nav .menu ul li {
   display: inline-block;
   padding: 16px 40px;
 }
 
-body > nav a {
+body > nav .menu ul li a {
   text-decoration: none;
   color: whitesmoke;
   font-size: 16px;
 }
 
-body > nav .is-open {
+body > nav .menu a.button {
+  text-decoration: none;
+  display: block;
+  background: skyblue;
+  color: whitesmoke;
+  border-radius: 5em;
+  padding: 10px 15px;
+  margin-left: 2em;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+body > nav .menu a.button:hover {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+body > nav.is-open {
   position: fixed;
   top: 0;
   left: 0;
@@ -150,17 +195,17 @@ body > nav .is-open {
   overflow: hidden;
 }
 
-body > nav .is-open .name {
+body > nav.is-open .name {
   color: black;
   position: fixed;
   top: 10px;
 }
 
-body > nav .is-open .menu {
+body > nav.is-open .menu {
   display: block;
 }
 
-body > nav .is-open .menu ul {
+body > nav.is-open .menu ul {
   position: fixed;
   top: 10%;
   left: 0;
@@ -181,18 +226,18 @@ body > nav .is-open .menu ul {
           align-items: center;
 }
 
-body > nav .is-open .menu ul a {
+body > nav.is-open .menu ul a {
   color: black;
   font-size: 1.5em;
 }
 
-body > nav .is-open #burger {
+body > nav.is-open #burger {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-body > nav .is-open #burger .line {
+body > nav.is-open #burger .line {
   stroke: black;
 }
 
@@ -394,7 +439,7 @@ body > nav .is-open #burger .line {
 
 .s3 article h1 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3em;
+  font-size: 4em;
   font-variant: small-caps;
   color: #43302f;
 }
@@ -406,9 +451,14 @@ body > nav .is-open #burger .line {
   border-radius: 0.25rem;
 }
 
-.s3 article .thumbnail :hover {
-  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+.s3 article a {
+  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.2));
+}
+
+.s3 article a :hover {
+  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.2));
 }
 
 .s3 .article1 h1 {
@@ -439,7 +489,7 @@ body > nav .is-open #burger .line {
 }
 
 .s3 .article4 h1 {
-  color: #3859b3;
+  color: #355cc7;
 }
 
 .s3 .article4 img {

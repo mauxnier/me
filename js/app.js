@@ -75,6 +75,7 @@ var myFullpage = new fullpage('#fullpage', {
 	onLeave: function(origin, destination, direction){
 		//Scrolling Effect and fp-nav color
 		if (origin.isFirst) $('body > nav').css('background-color', 'rgba(0, 0, 0, 0.5)');
+
 		if (destination.isFirst){
 			$('body > nav').css('background', 'transparent');
 			$('#fp-nav span').css('background', 'black'); //Cela ne fonctionne pas pour le moment **
@@ -87,7 +88,7 @@ var myFullpage = new fullpage('#fullpage', {
 		}
 
 		//Skills Bars
-		if (destination.index == 1){ //idky it works but it works
+		if (destination.index == 1){
 			$('.skill-percent').each(function(){
 				$(this).animate({
 					width:$(this).attr('data-percent')},"fast");
