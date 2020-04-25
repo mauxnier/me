@@ -309,10 +309,9 @@ body > nav.is-open #burger .line {
 
 .s2 .second-flex-container {
   position: absolute;
-  top: 15vh;
+  bottom: 10vh;
   right: 5vw;
   width: 45vw;
-  height: 80vh;
   /* SKILLS */
   /* SKILL BAR COLORS */
 }

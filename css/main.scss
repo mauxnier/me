@@ -263,16 +263,12 @@ body > nav.is-open {
 
     .second-flex-container { //not really a flex container coz again fullpage m'y oblige
         position: absolute;
-        top: 15vh;
+        bottom: 10vh;
         right: 5vw;
         width: 45vw;
-        height: 80vh;
 
         /* SKILLS */
-
-        //padding: 20px 15px 75px 15px;
  
-
         .skills-list {
             overflow: hidden;
             position: relative;
@@ -283,7 +279,7 @@ body > nav.is-open {
             background-color: #999797;
             content: '';
             display: block;
-            height:1rem;
+            height: 1rem;
             position: relative;
             top: 3px;
             /*top: 1rem;*/
