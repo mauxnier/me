@@ -68,16 +68,10 @@
 	};
 })(jQuery);
 
-// Skills Bars
-$('.skill-percent').each(function(){
-	$(this).animate({
-	  width:$(this).attr('data-percent')},"fast");
-	});
-
 // Hamburger navbar
 let burger = document.getElementById('burger'),
 	nav    = document.getElementById('main-nav');
-	// used in app.js line 74 too
+	// used in app.js line 75 too
 
 burger.addEventListener('click', function(e){
 	nav.classList.toggle('is-open');

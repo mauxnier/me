@@ -12,11 +12,6 @@ a span {
   background: whitesmoke !important;
 }
 
-/* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
-.black {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 /* AI Styling */
 .typewriter:after {
   border-right: 0.05em solid whitesmoke;
@@ -70,6 +65,14 @@ body {
   font-family: 'Montserrat';
   text-align: center;
   color: whitesmoke;
+}
+
+body .fp-controlArrow.fp-prev {
+  left: 5%;
+}
+
+body .fp-controlArrow.fp-next {
+  right: 5%;
 }
 
 body > nav {
@@ -132,7 +135,7 @@ body > nav a {
   font-size: 16px;
 }
 
-body > nav.is-open {
+body > nav .is-open {
   position: fixed;
   top: 0;
   left: 0;
@@ -143,17 +146,17 @@ body > nav.is-open {
   overflow: hidden;
 }
 
-body > nav.is-open .name {
+body > nav .is-open .name {
   color: black;
   position: fixed;
   top: 10px;
 }
 
-body > nav.is-open .menu {
+body > nav .is-open .menu {
   display: block;
 }
 
-body > nav.is-open .menu ul {
+body > nav .is-open .menu ul {
   position: fixed;
   top: 10%;
   left: 0;
@@ -174,23 +177,19 @@ body > nav.is-open .menu ul {
           align-items: center;
 }
 
-body > nav.is-open .menu ul a {
+body > nav .is-open .menu ul a {
   color: black;
   font-size: 1.5em;
 }
 
-body > nav.is-open #burger {
+body > nav .is-open #burger {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-body > nav.is-open #burger .line {
+body > nav .is-open #burger .line {
   stroke: black;
-}
-
-.section {
-  max-height: 100vh !important;
 }
 
 .s1 {

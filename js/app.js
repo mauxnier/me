@@ -1,3 +1,8 @@
+/**
+ * @author Killian Monnier
+ * @see https://github.com/paraceltus/me
+ */
+
 var myFullpage = new fullpage('#fullpage', {
 	licenseKey: 'my_licence_key',
 	//Navigation
@@ -10,7 +15,7 @@ var myFullpage = new fullpage('#fullpage', {
 	showActiveTooltip: false,
 	slidesNavigation: true,
 	slidesNavPosition: 'bottom',
-/*
+
 	//Scrolling
 	css3: true,
 	scrollingSpeed: 700,
@@ -46,9 +51,9 @@ var myFullpage = new fullpage('#fullpage', {
 	//Design
 	controlArrows: true,
 	verticalCentered: true,
-*/
+
 	sectionsColor : ['rgb(135, 206, 235)', 'rgb(135, 206, 235)', 'rgb(250, 128, 114)', '#43302f'],
-/*
+
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
@@ -65,20 +70,28 @@ var myFullpage = new fullpage('#fullpage', {
 	slideSelector: '.slide',
 
 	lazyLoading: true,
-*/
+
 	//events
 	onLeave: function(origin, destination, direction){
 		//Scrolling Effect
-		if (origin.isFirst) $('body > nav').addClass('black');
-		if (destination.isFirst) $('body > nav').removeClass('black');
+		if (origin.isFirst) $('body > nav').css('background-color', 'rgba(0, 0, 0, 0.5)');
+		if (destination.isFirst) $('body > nav').css('background', 'transparent');
 
 		//Burger navigation
-		if (nav.classList.contains('is-open')) {
+		if (nav.classList.contains('is-open')){
 			nav.classList.remove('is-open');
 			burger.classList.remove('active');
 		}
+
+		//Skills Bars
+		if (destination.index == 1){ //idky it works but it works
+			$('.skill-percent').each(function(){
+				$(this).animate({
+					width:$(this).attr('data-percent')},"fast");
+			});
+		}
 	},
-/*
+
 	afterLoad: function(origin, destination, direction){},
 	afterRender: function(){},
 	afterResize: function(width, height){},
@@ -86,5 +99,5 @@ var myFullpage = new fullpage('#fullpage', {
 	afterResponsive: function(isResponsive){},
 	afterSlideLoad: function(section, origin, destination, direction){},
 	onSlideLeave: function(section, origin, destination, direction){}
-*/
+
 });

@@ -15,11 +15,6 @@ a span {
     background: whitesmoke !important;
 }
 
-/* Changement de la couleur de la bar de navigation horizontale avec JQuery*/
-.black {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 /* AI Styling */
 .typewriter:after {
     border-right: 0.05em solid whitesmoke;
@@ -65,7 +60,17 @@ body {
     font-family: 'Montserrat';
     text-align: center;
     color: whitesmoke;
+
+    //fp-controlArrow on slides change place
+    .fp-controlArrow.fp-prev {
+        left: 5%;
+    }
+
+    .fp-controlArrow.fp-next {
+        right: 5%;
+    }
 }
+
 
 body > nav { /* Navbar du haut */
     width: 100vw;
@@ -116,59 +121,54 @@ body > nav { /* Navbar du haut */
         color: whitesmoke;
         font-size: 16px;
     }
-}
 
-body > nav.is-open {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh !important;
-    width: 100vw;
-    background-color: white;
-    z-index: 101;
-    overflow: hidden;
-
-    .name {
-        color: black;
+    .is-open {
         position: fixed;
-        top: 10px;
-    }
+        top: 0;
+        left: 0;
+        height: 100vh !important;
+        width: 100vw;
+        background-color: white;
+        z-index: 101;
+        overflow: hidden;
     
-    .menu {
-        display: block;
-
-        ul {
+        .name {
+            color: black;
             position: fixed;
-            top: 10%;
-            left: 0;
-            height: 80vh;
-            width: 100vw;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
+            top: 10px;
+        }
+        
+        .menu {
+            display: block;
+    
+            ul {
+                position: fixed;
+                top: 10%;
+                left: 0;
+                height: 80vh;
+                width: 100vw;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+    
+                a {
+                    color: black;
+                    font-size: 1.5em;
+                }
+            }
+        }
 
-            a {
-                color: black;
-                font-size: 1.5em;
+        #burger {
+            position: absolute;
+            top: 0;
+            left: 0;
+    
+            .line {
+                stroke: black;
             }
         }
     }
-
-    #burger {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        .line {
-            stroke: black;
-        }
-    }
-}
-
-
-.section {
-    max-height: 100vh !important;
 }
 
 .s1 { /* Première section */
@@ -299,10 +299,10 @@ body > nav.is-open {
         /* SKILL BAR COLORS */
 
         .skill-percent-web {
-            background-color: #00B1DB   ;
+            background-color: #00B1DB;
         }
         .skill-percent-js {
-            background-color: #FFC100 ;
+            background-color: #FFC100;
         }
         .skill-percent-php {
             background-color: #554699;
@@ -596,4 +596,3 @@ body > nav.is-open {
         }
     }
 }
-
