@@ -228,8 +228,10 @@ body > nav.is-open {
 }
 
 .s2 { /* Deuxième section */
-    //display: flex;
-    //flex-flow: row nowrap;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
 
     h1 {
         font-family: Arial, Helvetica, sans-serif;
@@ -241,8 +243,8 @@ body > nav.is-open {
 
     img {
         border-radius: 50%;
-        height: 50%;
-        width: 50%;
+        height: 25vw;
+        width: 25vw;
         filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.486));
     }
 
@@ -252,27 +254,77 @@ body > nav.is-open {
         margin: 0 5% 5% 5%;
     }
 
-    /*
-    .flex-container {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        max-width: 50%;
-    }
-    */
-
     .first-flex-container {
+        max-width: 40vw;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        max-width: 50%;
     }
 
     .second-flex-container {
-        max-width: 50%;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        max-width: 40vw;
+
+        /* SKILLS */
+
+        //padding: 20px 15px 75px 15px;
+ 
+
+        .skills-list {
+            overflow: hidden;
+            position: relative;
+            z-index: 10
+        }
+
+        .skill-name:after {
+            background-color: #999797;
+            content: '';
+            display: block;
+            height:1rem;
+            position: relative;
+            top: 3px;
+            /*top: 1rem;*/
+            width: 100%;
+        }
+
+        .skill-percent {
+            font-size: 0;
+            height: 1rem;
+            position: relative;
+            top: -.8rem;
+            transition: 3s linear;
+            width: 0;
+            margin-left: 0;
+        }
+
+        /* SKILL BAR COLORS */
+
+        .skill-percent-web {
+            background-color: #00B1DB   ;
+        }
+        .skill-percent-js {
+            background-color: #FFC100 ;
+        }
+        .skill-percent-php {
+            background-color: #554699;
+        }
+        .skill-percent-sql {
+            background-color: #3841c9;
+        }
+        .skill-percent-c {
+            background-color: #8a8ec9;
+        }
+        .skill-percent-py {
+            background-color: #059400;
+        }
+        .skill-percent-unix {
+            background-color: #0073b0;
+        }
+        .skill-percent-java {
+            background-color: #ff5c00;
+        }
+        .skill-percent-projet {
+            background-color: #FF8B00;
+        }
     }
 }
 
@@ -288,79 +340,6 @@ body > nav.is-open {
         margin-left: 2em;
         font-size: 2em;
     }
-}
-
-/* SKILLS */
-
-#skills {
-    padding: 20px 15px 75px 15px;
-    color: #fff;
-}
-
-.skills-text {
-    min-width: 30em;
-    font-size: 20px;
-    position: absolute;
-    right: 5em;
-    bottom: 2em;
-    
-}
-
-.skills-list {
-    overflow: hidden;
-    position: relative;
-    z-index: 10
-}
-
-.skill-name:after {
-    background-color: #999797;
-    content: '';
-    display: block;
-    height:1rem;
-    position: relative;
-    top: 3px;
-    /*top: 1rem;*/
-    width: 100%;
-}
-
-.skill-percent {
-    font-size: 0;
-    height: 1rem;
-    position: relative;
-    top: -.8rem;
-    transition: 3s linear;
-    width: 0;
-    margin-left: 0;
-}
-
-/* SKILL BAR COLORS */
-
-.skill-percent-web {
-    background-color: #00B1DB   ;
-}
-.skill-percent-js {
-    background-color: #FFC100 ;
-}
-.skill-percent-php {
-    background-color: #554699;
-}
-.skill-percent-sql {
-    background-color: #3841c9;
-}
-.skill-percent-c {
-    background-color: #8a8ec9;
-}
-.skill-percent-py {
-    background-color: #059400;
-}
-.skill-percent-unix {
-    background-color: #0073b0;
-}
-.skill-percent-java {
-    background-color: #ff5c00;
-}
-.skill-percent-projet {
-    background-color: #FF8B00;
 }
 
 /* Heading Underline */
