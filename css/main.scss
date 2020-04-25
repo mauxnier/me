@@ -129,11 +129,9 @@ body > nav.is-open {
     overflow: hidden;
 
     .name {
-        h3 {
-            color: black;
-            position: fixed;
-            top: 5px;
-        }
+        color: black;
+        position: fixed;
+        top: 10px;
     }
     
     .menu {
@@ -228,10 +226,12 @@ body > nav.is-open {
 }
 
 .s2 { /* Deuxième section */
+    /* fonctionne pas pcq fullpage
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-evenly;
+    */ 
 
     h1 {
         font-family: Arial, Helvetica, sans-serif;
@@ -255,14 +255,18 @@ body > nav.is-open {
     }
 
     .first-flex-container {
-        max-width: 40vw;
+        max-width: 50vw;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
     }
 
-    .second-flex-container {
-        max-width: 40vw;
+    .second-flex-container { //not really a flex container coz again fullpage m'y oblige
+        position: absolute;
+        top: 15vh;
+        right: 5vw;
+        width: 45vw;
+        height: 80vh;
 
         /* SKILLS */
 
@@ -576,6 +580,7 @@ body > nav.is-open {
             position: absolute;
             top: 70%;
         }
+
     }
 
     .s2 {
@@ -583,6 +588,11 @@ body > nav.is-open {
             min-width: 100vw;
             min-height: 75vh;
             justify-content: space-evenly;
+
+            img {
+                height: 35vh;
+                width: 35vh;
+            }
         }
 
         .second-flex-container {

@@ -143,10 +143,10 @@ body > nav.is-open {
   overflow: hidden;
 }
 
-body > nav.is-open .name h3 {
+body > nav.is-open .name {
   color: black;
   position: fixed;
-  top: 5px;
+  top: 10px;
 }
 
 body > nav.is-open .menu {
@@ -263,19 +263,12 @@ body > nav.is-open #burger .line {
 
 .s2 {
   /* Deuxième section */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  /* fonctionne pas pcq fullpage
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    */
 }
 
 .s2 h1 {
@@ -301,7 +294,7 @@ body > nav.is-open #burger .line {
 }
 
 .s2 .first-flex-container {
-  max-width: 40vw;
+  max-width: 50vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,7 +308,11 @@ body > nav.is-open #burger .line {
 }
 
 .s2 .second-flex-container {
-  max-width: 40vw;
+  position: absolute;
+  top: 15vh;
+  right: 5vw;
+  width: 45vw;
+  height: 80vh;
   /* SKILLS */
   /* SKILL BAR COLORS */
 }
@@ -660,6 +657,10 @@ body > nav.is-open #burger .line {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+  .s2 .first-flex-container img {
+    height: 35vh;
+    width: 35vh;
   }
   .s2 .second-flex-container {
     display: none;
