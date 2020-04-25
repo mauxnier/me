@@ -73,9 +73,12 @@ var myFullpage = new fullpage('#fullpage', {
 
 	//events
 	onLeave: function(origin, destination, direction){
-		//Scrolling Effect
+		//Scrolling Effect and fp-nav color
 		if (origin.isFirst) $('body > nav').css('background-color', 'rgba(0, 0, 0, 0.5)');
-		if (destination.isFirst) $('body > nav').css('background', 'transparent');
+		if (destination.isFirst){
+			$('body > nav').css('background', 'transparent');
+			$('#fp-nav span').css('background', 'black'); //Cela ne fonctionne pas pour le moment **
+		}
 
 		//Burger navigation
 		if (nav.classList.contains('is-open')){

@@ -64,10 +64,12 @@ body {
     //fp-controlArrow on slides change place
     .fp-controlArrow.fp-prev {
         left: 5%;
+        filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
     }
 
     .fp-controlArrow.fp-next {
         right: 5%;
+        filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
     }
 }
 
@@ -245,7 +247,7 @@ body > nav { /* Navbar du haut */
         border-radius: 50%;
         height: 25vw;
         width: 25vw;
-        filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.486));
+        filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
     }
 
     p {
@@ -329,8 +331,73 @@ body > nav { /* Navbar du haut */
 }
 
 .s3 { /* Troisième section */
-    min-width: 100vw;
+    article {
+        max-width: 70vw;
+        margin: auto;
 
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            font-variant: small-caps;
+            color: $rock;
+        }
+
+        .thumbnail {
+            padding: 0.25rem;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+
+            :hover {
+                filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+            }
+        }
+    }
+
+    .article1 {
+        h1 {
+            color: rgb(0, 16, 107);
+        }
+
+        img {
+            width: 35%;
+            height: 35%;
+        }
+    }
+
+    .article2 {
+        h1 {
+            color: rgb(37, 158, 26);
+        }
+
+        img {
+            width: 45%;
+            height: 45%;
+        }
+    }
+
+    .article3 {
+        h1 {
+            color: black;
+        }
+
+        img {
+            width: 40%;
+            height: 40%;
+        }
+    }
+
+    .article4 {
+        h1 {
+            color: rgb(56, 89, 179);
+        }
+        
+        img {
+            width: 15%;
+            height: 15%;
+            background-color: #FFB840;
+        }
+    }
 }
 
 .s4 { /* Quatrième section */
@@ -500,30 +567,6 @@ body > nav { /* Navbar du haut */
     }
 
     body > nav {
-        /*
-        ul {
-            max-height: 0px;
-            background: #000;
-        }
-
-        li {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .menu-icon {
-            display: block;
-        }
-
-        .name {
-            position: fixed;
-            top: 0;
-            margin-top: 16px;
-        }
-        */
-        
         display: block;
         height: 80px;
         padding: 0;

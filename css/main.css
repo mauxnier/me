@@ -69,10 +69,14 @@ body {
 
 body .fp-controlArrow.fp-prev {
   left: 5%;
+  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
 }
 
 body .fp-controlArrow.fp-next {
   right: 5%;
+  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
 }
 
 body > nav {
@@ -282,8 +286,8 @@ body > nav .is-open #burger .line {
   border-radius: 50%;
   height: 25vw;
   width: 25vw;
-  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.486));
-          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.486));
+  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
 }
 
 .s2 p {
@@ -381,7 +385,67 @@ body > nav .is-open #burger .line {
 
 .s3 {
   /* Troisième section */
-  min-width: 100vw;
+}
+
+.s3 article {
+  max-width: 70vw;
+  margin: auto;
+}
+
+.s3 article h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  font-variant: small-caps;
+  color: #43302f;
+}
+
+.s3 article .thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.s3 article .thumbnail :hover {
+  -webkit-filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
+}
+
+.s3 .article1 h1 {
+  color: #00106b;
+}
+
+.s3 .article1 img {
+  width: 35%;
+  height: 35%;
+}
+
+.s3 .article2 h1 {
+  color: #259e1a;
+}
+
+.s3 .article2 img {
+  width: 45%;
+  height: 45%;
+}
+
+.s3 .article3 h1 {
+  color: black;
+}
+
+.s3 .article3 img {
+  width: 40%;
+  height: 40%;
+}
+
+.s3 .article4 h1 {
+  color: #3859b3;
+}
+
+.s3 .article4 img {
+  width: 15%;
+  height: 15%;
+  background-color: #FFB840;
 }
 
 .s4 {
@@ -582,29 +646,6 @@ body > nav .is-open #burger .line {
     stroke-dashoffset: -132px;
   }
   body > nav {
-    /*
-        ul {
-            max-height: 0px;
-            background: #000;
-        }
-
-        li {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .menu-icon {
-            display: block;
-        }
-
-        .name {
-            position: fixed;
-            top: 0;
-            margin-top: 16px;
-        }
-        */
     display: block;
     height: 80px;
     padding: 0;
