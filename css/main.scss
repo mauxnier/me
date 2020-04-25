@@ -168,14 +168,13 @@ body > nav.is-open {
     }
     
     .menu {
-        display: block;
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
 
         ul {
-            position: fixed;
-            top: 10%;
-            left: 0;
-            height: 80vh;
-            width: 100vw;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
@@ -185,6 +184,11 @@ body > nav.is-open {
                 color: black;
                 font-size: 1.5em;
             }
+        }
+
+        a.button {
+            margin: 2em 0 0 0;
+            background-color: $rock;
         }
     }
 
