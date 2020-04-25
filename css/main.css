@@ -448,6 +448,20 @@ body > nav.is-open #burger .line {
 .s3 article {
   max-width: 70vw;
   margin: auto;
+  margin-bottom: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .s3 article h1 {
@@ -455,6 +469,11 @@ body > nav.is-open #burger .line {
   font-size: 4em;
   font-variant: small-caps;
   color: #43302f;
+  margin: 5vh;
+}
+
+.s3 article h3 {
+  margin: 5vh;
 }
 
 .s3 article .thumbnail {
@@ -497,8 +516,8 @@ body > nav.is-open #burger .line {
 }
 
 .s3 .article3 img {
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
 }
 
 .s3 .article4 h1 {
@@ -506,8 +525,8 @@ body > nav.is-open #burger .line {
 }
 
 .s3 .article4 img {
-  width: 15%;
-  height: 15%;
+  width: 85%;
+  height: 85%;
   background-color: #FFB840;
 }
 
@@ -729,6 +748,9 @@ body > nav.is-open #burger .line {
   #fp-nav {
     right: 5px !important;
   }
+  .fp-slidesNav.fp-bottom {
+    bottom: 5px;
+  }
   .polygoneShadow {
     -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
             filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
@@ -766,6 +788,12 @@ body > nav.is-open #burger .line {
   }
   .s2 .second-flex-container {
     display: none;
+  }
+  .s3 article {
+    margin-bottom: 0;
+  }
+  .s3 article h1 {
+    font-size: 3em;
   }
 }
 /*# sourceMappingURL=main.css.map */
