@@ -1,6 +1,8 @@
 /**
  * @author Killian Monnier
  * @see https://github.com/paraceltus/me
+ * @copyright GNU General Public License v3.0
+ * @description Script d'animation pour mon site web
  */
 
 //Typewriter

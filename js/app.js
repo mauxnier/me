@@ -1,6 +1,8 @@
 /**
  * @author Killian Monnier
  * @see https://github.com/paraceltus/me
+ * @copyright GNU General Public License v3.0
+ * @description Script fullPage.js pour le website AllSafe
  */
 
 var myFullpage = new fullpage('#fullpage', {
