@@ -60,6 +60,7 @@ a span {
 
 /* CSS pour la page */
 body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat';
