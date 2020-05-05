@@ -76,13 +76,15 @@ var myFullpage = new fullpage('#fullpage', {
 	//events
 	onLeave: function(origin, destination, direction){
 		//Scrolling Effect and fp-nav color
-		if (origin.isFirst) $('body > nav').css('background-color', 'rgba(0, 0, 0, 0.5)');
-
-		if (destination.isFirst){
+		console.log(origin, destination, direction)
+		
+		if (destination.anchor == "home"){
 			$('body > nav').css('background', 'transparent');
-			$('#fp-nav span').css('background', 'black'); //Cela ne fonctionne pas pour le moment **
+			//$('#fp-nav span').css('background', 'black'); //Cela ne fonctionne pas pour le moment **
+		} else {
+			$('body > nav').css('background', 'rgba(0, 0, 0, 0.5)');
 		}
-
+		
 		//Burger navigation
 		if (nav.classList.contains('is-open')){
 			nav.classList.remove('is-open');
