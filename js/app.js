@@ -6,7 +6,7 @@
  */
 
 var myFullpage = new fullpage('#fullpage', {
-	licenseKey: 'my_licence_key',
+	licenseKey: '!B@8N7V^w7', //my licence key request on https://alvarotrigo.com/fullPage/extensions/requestKey.html
 	//Navigation
 	menu: '#menu',
 	lockAnchors: false,
