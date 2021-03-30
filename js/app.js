@@ -76,7 +76,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//events
 	onLeave: function(origin, destination, direction){
 		//Scrolling Effect and fp-nav color
-		console.log(origin, destination, direction)
+		// console.log(origin, destination, direction)
 		
 		if (destination.anchor == "home"){
 			$('body > nav').css('background', 'transparent');

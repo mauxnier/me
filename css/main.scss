@@ -9,6 +9,10 @@ html, body {
     padding: 0;
     width: 100%;
     overflow: hidden;
+
+    #fp-nav {
+        top: 5% !important;
+    }
 }
 
 /* Changement de la couleur de la bar de navigation du fullpage */
@@ -276,13 +280,13 @@ body > nav.is-open {
 
     img {
         border-radius: 50%;
-        height: 25vw;
-        width: 25vw;
+        height: 20vw;
+        width: 20vw;
         filter: drop-shadow(10px 10px 1em rgba(0, 0, 0, 0.5));
     }
 
     p {
-        text-align: center;
+        text-align: justify;
         margin-left: 2em;
         margin: 0 5% 5% 5%;
     }
@@ -297,8 +301,8 @@ body > nav.is-open {
     .second-flex-container { //not really a flex container coz again fullpage m'y oblige
         position: absolute;
         bottom: 8vh;
-        right: 5vw;
-        width: 45vw;
+        right: 10vw;
+        width: 35vw;
 
         /* SKILLS */
  
@@ -630,10 +634,6 @@ body > nav.is-open {
                 margin: 0;
             }
         }
-    }
-    
-    #fp-nav {
-        right: 5px !important;
     }
 
     .fp-slidesNav.fp-bottom {
